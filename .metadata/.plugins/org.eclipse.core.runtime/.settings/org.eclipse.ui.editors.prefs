@@ -1,0 +1,12 @@
+additionIndicationColor=0,128,192
+changeIndicationColor=0,128,0
+deletionIndicationColor=128,0,0
+eclipse.preferences.version=1
+overviewRuler_migration=migrated_3.1
+printMargin=true
+printMarginColumn=120
+quickdiff.defaultProvider=org.eclipse.egit.ui.internal.decorators.GitQuickDiffProvider
+showEnclosedSpaces=false
+showEnclosedTabs=false
+showLeadingTabs=false
+showLineFeed=false
