@@ -1,3 +1,5 @@
 eclipse.preferences.version=1
+indentationChar=space
+indentationSize=4
 lineWidth=120
 preserveCDATAContent=true
