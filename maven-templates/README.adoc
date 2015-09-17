@@ -65,8 +65,6 @@ Also, Maven will generate incorrect SCM information in modules. To avoid this, y
 </scm>
 ----
 
-NOTE: This documentation should be rewritten below this point.
-
 == Features
 
 === Continuous integration
