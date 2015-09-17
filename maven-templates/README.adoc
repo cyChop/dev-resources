@@ -4,11 +4,7 @@ Cyrille Chopelet <cyrille.chopelet@mines-nancy.org>
 This directory contains several POMs which can be used as bases when creating a new Maven project.
 Some fields are prepared for my own use and integration in the http://keyboardplaying.org[Keyboard Playing] ecosystem but this may be easily modified.
 
-:toc:
-
 == How to use?
-
-These are only template files. The use is simple: copy the one you need into your project, rename it and change what needs changing footnote[If I did my job well, this should mostly be located within the `<properties/>` section of the POM].
 
 [cols="1,2",options=""]
 |===
@@ -24,6 +20,7 @@ These are only template files. The use is simple: copy the one you need into you
 === Java version
 
 Property:: `java.version`
+Description:: the version of Java you are using
 Default:: `1.7`
 
 These templates were designed for Java 7 projects. If you wish to use another version, you should set the `java.version` property.
@@ -39,20 +36,25 @@ These templates automatically copies the content of the `java.version` property 
 === File encoding
 
 Property:: `project.build.sourceEncoding`
+Description:: the encoding for your files
 Default:: `UTF-8`
 
 This is the default property used by all standard Maven project (compiler, jar, war, ...).
-
-NOTE: This documentation should be rewritten below this point.
 
 === SCM information
 
 The SCM information and many URLs are generated based on two properties you must override:
 
-* `github.user`: the user the repository belongs to;
-* `github.repo`: the name of the repository.
+Github user::
+  Property::: `github.user`
+  Description::: the user the repository belongs to
+  Default::: `cyChop`
+Github repo::
+  Property::: `github.repo`
+  Description::: the name of the repository
+  Default::: ` ${project.artifactId}`
 
-Also, Maven will generate incorrect SCM information because your project will be a child to this one. To avoid this, you should also copy this in your child POM:
+Also, Maven will generate incorrect SCM information in modules. To avoid this, you should use the template I provide for child modules or copy this in your child POM:
 
 [source,xml]
 ----
@@ -63,14 +65,15 @@ Also, Maven will generate incorrect SCM information because your project will be
 </scm>
 ----
 
+NOTE: This documentation should be rewritten below this point.
+
 == Features
 
 === Continuous integration
 
 ==== Coverage report
 
-The `<build/>` section contains plugin definitions required to use Coveralls.io reports with
-the Cobertura plugin.
+The `<build/>` section contains plugin definitions required to use Coveralls.io reports with the Cobertura plugin.
 
 ===== Enabling coverage reports in Travis CI
 
@@ -83,14 +86,13 @@ after_success:
 
 ==== Sonar
 
-`sonar.java.source` and `sonar.java.target` are the Sonar equivalent of `maven.compiler.source` and `maven.compiler.target`. They are automatically set to the same value so that, if you use Sonar for a static analysis, it will be performed with the same settings as your compilation.
+`sonar.java.source` and `sonar.java.target` are the Sonar equivalent of `maven.compiler.source` and `maven.compiler.target`. They are automatically set to the same value so that, if you use Sonar for static analysis, it will be performed with the same settings as your compilation.
 
 === Maven site
 
 ==== Reports
 
-Some reports are automatically included inside the Maven-generated site (`mvn site`). These
-reports are:
+Some reports are automatically included inside the Maven-generated site (`mvn site`). These reports are:
 
 * Surefire test report;
 * Cobertura coverage report;
