@@ -13,5 +13,7 @@ Additional documentation may be found in each directory.
 
 | `maven-templates`  | Template files for Maven (POM)
 
+| `java-source`      | Reusable classes
+
 | `eclipse-settings` | Eclipse settings to be used when creating a new workspace
 |===
