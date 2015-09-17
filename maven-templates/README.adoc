@@ -1,29 +1,49 @@
 = github-hosted-maven-kp-project
 Cyrille Chopelet <cyrille.chopelet@mines-nancy.org>
 
-// Set your repository informations here.
-:github-user: cyChop
-:github-repo: github-hosted-maven-kp-project
-:license-name: MIT
-:license-shield: {license-name}
-:license-url: http://opensource.org/licenses/MIT
+This directory contains several POMs which can be used as bases when creating a new Maven project.
+Some fields are prepared for my own use and integration in the http://keyboardplaying.org[Keyboard Playing] ecosystem but this may be easily modified.
 
-// The badges. Should not require any change.
-image:http://img.shields.io/badge/license-{license-shield}-blue.svg[License: {license-name}, link="{license-url}"]
-
-// Now, the main documentation.
-
-This POM sets some standard to use with GitHub-hosted projects. It was specifically designed for the KeyboardPlaying projects. It is free to use under the terms of the MIT license.
+:toc:
 
 == How to use?
 
-These are only template files. The use is simple: copy it in your project, rename it and change what needs changing (hopefully mostly POM properties).
+These are only template files. The use is simple: copy the one you need into your project, rename it and change what needs changing footnote[If I did my job well, this should mostly be located within the `<properties/>` section of the POM].
+
+[cols="1,2",options=""]
+|===
+| `pom-multimodule-parent-template.xml` | template for the parent of multimodule Maven project
+
+| `pom-multimodule-child-template.xml`  | template to apply to each child of the multimodule project
+
+| `pom-single-module-template.xml`      | template for simple, single-module Maven project
+|===
 
 == POM properties
 
 === Java version
 
-This POM is designed for Java 1.7 projects. If you wish to use another version, you should override the `java.version` property.
+Property:: `java.version`
+Default:: `1.7`
+
+These templates were designed for Java 7 projects. If you wish to use another version, you should set the `java.version` property.
+
+The maven-compiler-plugin uses two properties to determine which version the sources are coded in and which version they should be compiled to.
+SonarQube also uses two different properties, but not the same.
+
+These templates automatically copies the content of the `java.version` property to these other properties
+
+* `java.version` -> `maven.compiler.source` -> `sonar.java.source`
+* `java.version` -> `maven.compiler.target` -> `sonar.java.target`
+
+=== File encoding
+
+Property:: `project.build.sourceEncoding`
+Default:: `UTF-8`
+
+This is the default property used by all standard Maven project (compiler, jar, war, ...).
+
+NOTE: This documentation should be rewritten below this point.
 
 === SCM information
 
