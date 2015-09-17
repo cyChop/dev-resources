@@ -1,0 +1,17 @@
+= Development resources
+Cyrille Chopelet <cyrille.chopelet@mines-nancy.org>
+
+This repository contains some standard settings or template files that help me streamline my developments.
+
+Additional documentation may be found in each directory.
+
+[cols="1,3", options="header"]
+|===
+| Directory          | Description
+
+| `github-templates` | Standard files that can be applied to most Github projects
+
+| `maven-templates`  | Template files for Maven (POM)
+
+| `eclipse-settings` | Eclipse settings to be used when creating a new workspace
+|===

@@ -1,0 +1,77 @@
+= github-hosted-maven-kp-project
+Cyrille Chopelet <cyrille.chopelet@mines-nancy.org>
+
+// Set your repository informations here.
+:github-user: cyChop
+:github-repo: github-hosted-maven-kp-project
+:license-name: MIT
+:license-shield: {license-name}
+:license-url: http://opensource.org/licenses/MIT
+
+// The badges. Should not require any change.
+image:http://img.shields.io/badge/license-{license-shield}-blue.svg[License: {license-name}, link="{license-url}"]
+
+// Now, the main documentation.
+
+This POM sets some standard to use with GitHub-hosted projects. It was specifically designed for the KeyboardPlaying projects. It is free to use under the terms of the MIT license.
+
+== How to use?
+
+These are only template files. The use is simple: copy it in your project, rename it and change what needs changing (hopefully mostly POM properties).
+
+== POM properties
+
+=== Java version
+
+This POM is designed for Java 1.7 projects. If you wish to use another version, you should override the `java.version` property.
+
+=== SCM information
+
+The SCM information and many URLs are generated based on two properties you must override:
+
+* `github.user`: the user the repository belongs to;
+* `github.repo`: the name of the repository.
+
+Also, Maven will generate incorrect SCM information because your project will be a child to this one. To avoid this, you should also copy this in your child POM:
+
+[source,xml]
+----
+<scm>
+  <url>https://github.com/${github.user}/${github.repo}</url>
+  <connection>scm:git:https://github.com/${github.user}/${github.repo}.git</connection>
+  <developerConnection>scm:git:git@github.com:${github.user}/${github.repo}.git</developerConnection>
+</scm>
+----
+
+== Features
+
+=== Continuous integration
+
+==== Coverage report
+
+The `<build/>` section contains plugin definitions required to use Coveralls.io reports with
+the Cobertura plugin.
+
+===== Enabling coverage reports in Travis CI
+
+Add the following to your `.travis.yml` configuration file:
+
+----
+after_success:
+  - mvn cobertura:cobertura coveralls:report
+----
+
+==== Sonar
+
+`sonar.java.source` and `sonar.java.target` are the Sonar equivalent of `maven.compiler.source` and `maven.compiler.target`. They are automatically set to the same value so that, if you use Sonar for a static analysis, it will be performed with the same settings as your compilation.
+
+=== Maven site
+
+==== Reports
+
+Some reports are automatically included inside the Maven-generated site (`mvn site`). These
+reports are:
+
+* Surefire test report;
+* Cobertura coverage report;
+* API documentation.
