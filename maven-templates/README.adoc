@@ -1,10 +1,12 @@
-= github-hosted-maven-kp-project
+= Maven templates
 Cyrille Chopelet <cyrille.chopelet@mines-nancy.org>
 
 This directory contains several POMs which can be used as bases when creating a new Maven project.
 Some fields are prepared for my own use and integration in the http://keyboardplaying.org[Keyboard Playing] ecosystem but this may be easily modified.
 
 == How to use?
+
+Those are template files. Copy what you need in your project and edit to match your needs (hopefully, most of it will be in the `<properties/>` section).
 
 [cols="1,2",options=""]
 |===
@@ -52,7 +54,7 @@ Github user::
 Github repo::
   Property::: `github.repo`
   Description::: the name of the repository
-  Default::: ` ${project.artifactId}`
+  Default::: `${project.artifactId}`
 
 Also, Maven will generate incorrect SCM information in modules. To avoid this, you should use the template I provide for child modules or copy this in your child POM:
 
