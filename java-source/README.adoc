@@ -1,0 +1,12 @@
+= Java resources
+Cyrille Chopelet <cyrille.chopelet@mines-nancy.org>
+
+== `CyclicDependenciesTest`
+
+This class ensures there are no cyclic dependencies in packages of a Maven-built project. This is still a bit lenient as it does not control cyclic dependencies within classes, but it's a start for a clean and well-thought structure.
+
+This is to be inserted in the main package of each module of a Maven project, in the `src/test/java` directory.
+
+Required Maven dependencies::
+* `junit:junit`
+* `jdepend:jdepend`

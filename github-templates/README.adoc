@@ -1,0 +1,15 @@
+= Github templates
+Cyrille Chopelet <cyrille.chopelet@mines-nancy.org>
+
+These are Github related files
+
+== `README` template
+
+This file provides a template basis for Maven projects. Using only some variables, it adds badges for:
+
+* https://travis-ci.org/[Travis CI];
+* https://coveralls.io/[Coveralls];
+* https://scan.coverity.com/[Coverity Scan];
+* a license badge.
+
+You must still write the documentation, though. ;)
