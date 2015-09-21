@@ -97,3 +97,19 @@ Some reports are automatically included inside the Maven-generated site (`mvn si
 * Surefire test report;
 * Cobertura coverage report;
 * API documentation.
+
+== Side notes
+
+All ascii arts in POM are generated using http://patorjk.com/software/taag/#p=display&f=Small&t=Test[Patorjk's online ascii art generator], using the `Small` font.
+
+They are included in comments as `CDATA` blocks. With the Eclipse configuration supplied within this repository, such blocks are not formatted, thus preserving the spaces instead of breaking the art.
+
+[source,xml]
+.Example
+----
+    <!--<![CDATA[
+           _   _              _
+          /_\ | |__  ___ _  _| |_
+         / _ \| '_ \/ _ \ || |  _|
+        /_/ \_\_.__/\___/\_,_|\__| ]]>-->
+----
