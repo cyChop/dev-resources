@@ -12,4 +12,24 @@ This file provides a template basis for Maven projects. Using only some variable
 * https://scan.coverity.com/[Coverity Scan];
 * a license badge.
 
+Here are the variables you should set to benefit it.
+
+[cols="1,2",options="header"]
+|===
+| Variable         | Signification
+| `github-user`    | The name of the Github repository owner
+| `github-repo`    | The name of the Github repository
+| `coverity-name`  | The identifier of the project on Coverity Scan
+| `coverity-scan`  | The identifier of the Coverity Scan badge
+| `license-name`   | The license name, used as an alternative text for the badge
+| `license-shield` | The license name, displayed on the badge (`_` for space and `--` for `-`)
+| `license-url`    | The URL to a detailed version of the license
+|===
+
 You must still write the documentation, though. ;)
+
+== `.gitignore` template
+
+This is a template with versions for several projects options (essentially Maven for now).
+
+It also takes IDEs (Eclipse and Cloud9) into account.

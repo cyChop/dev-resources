@@ -1,0 +1,28 @@
+## Maven ##
+
+# Multimodule
+/*/target/
+pom.xml.*
+release.properties
+
+# Single module
+/target/
+/pom.xml.*
+/release.properties
+
+## IDE ##
+
+# Cloud9
+/.c9/
+
+# Eclipse (Maven, multimodule)
+/*/.settings/
+/*/.classpath
+/*/.project
+/.settings/
+/.project
+
+# Eclipse (Maven, single module)
+/.settings/
+/.classpath
+/.project
