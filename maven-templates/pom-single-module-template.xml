@@ -9,6 +9,7 @@
 
     <name>GitHub-hosted Maven KP project</name>
     <description></description>
+    <url>${project.srm.url}</url>
 
     <licenses>
         <license>
