@@ -12,13 +12,15 @@ This file provides a template basis for Maven projects. Using only some variable
 * https://scan.coverity.com/[Coverity Scan];
 * a license badge.
 
-Here are the variables you should set to benefit it.
+Here are the variables you should set to benefit it (depending on the type of project you are creating).
 
 [cols="1,2",options="header"]
 |===
 | Variable         | Signification
 | `github-user`    | The name of the Github repository owner
 | `github-repo`    | The name of the Github repository
+| `pom-groupid`    | The groupId of the Maven project
+| `pom-artifactid` | The artifactId of the Maven project
 | `coverity-name`  | The identifier of the project on Coverity Scan
 | `coverity-scan`  | The identifier of the Coverity Scan badge
 | `license-name`   | The license name, used as an alternative text for the badge
