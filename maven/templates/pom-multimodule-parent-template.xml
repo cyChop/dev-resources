@@ -5,7 +5,7 @@
     <groupId>org.keyboardplaying</groupId>
     <artifactId>github-hosted-maven-kp-project</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>GitHub-hosted Maven KP project</name>
     <description></description>
@@ -33,35 +33,27 @@
         <!-- Version management - test -->
         <junit.version>4.12</junit.version>
         <jdepend.version>2.9.1</jdepend.version>
-
-        <!-- Sonar -->
-        <sonar.java.source>${maven.compiler.source}</sonar.java.source>
-        <sonar.java.target>${maven.compiler.target}</sonar.java.target>
-        <sonar.host.url>http://sonar.keyboardplaying.org</sonar.host.url>
-        <sonar.jdbc.url>jdbc:mysql://sonar.keyboardplaying.org:3306/sonar</sonar.jdbc.url>
-        <sonar.jdbc.username>sonar</sonar.jdbc.username>
-        <sonar.jdbc.password>sonar</sonar.jdbc.password>
     </properties>
 
-    <dependencies>
-        <!--<![CDATA[
-             _____       _
-            |_   _|__ __| |_
-              | |/ -_|_-<  _|
-              |_|\___/__/\__| ]]>-->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>jdepend</groupId>
-            <artifactId>jdepend</artifactId>
-            <version>${jdepend.version}</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <!--<![CDATA[
+                 _____       _
+                |_   _|__ __| |_
+                  | |/ -_|_-<  _|
+                  |_|\___/__/\__| ]]>-->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>jdepend</groupId>
+                <artifactId>jdepend</artifactId>
+                <version>${jdepend.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <pluginManagement>
@@ -89,6 +81,7 @@
                         </archive>
                     </configuration>
                 </plugin>
+            </plugins>
         </pluginManagement>
     </build>
 

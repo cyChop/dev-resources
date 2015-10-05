@@ -75,7 +75,7 @@ The `<properties />` section contains the configuration for Sonar quality analys
 
 `sonar.java.source` and `sonar.java.target` are the Sonar equivalent of `maven.compiler.source` and `maven.compiler.target`. They are automatically set to the same value so that, if you use Sonar for static analysis, it will be performed with the same settings as your compilation.
 
-The Travis configuration template triggers the Sonar quality analysis each time a push to the `quality` branch is performed.
+The Travis configuration file triggers the Sonar quality analysis each time a push to the `quality` branch is performed.
 
 === Maven site
 
