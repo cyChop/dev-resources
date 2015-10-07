@@ -1,0 +1,5 @@
+= Eclipse workspace settings
+
+This repository contains some settings I use when programming.
+
+You can import them by using File -> Import -> General -> Preferences.
