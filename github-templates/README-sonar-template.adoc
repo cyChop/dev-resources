@@ -1,4 +1,4 @@
-= Maths
+= Project name
 Cyrille Chopelet <cyrille.chopelet@mines-nancy.org>
 
 // Set your repository informations here.
