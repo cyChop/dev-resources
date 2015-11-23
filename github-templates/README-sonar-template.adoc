@@ -6,6 +6,7 @@ Cyrille Chopelet <cyrille.chopelet@mines-nancy.org>
 :github-repo: github-hosted-maven-kp-project
 :pom-groupid: org.keyboardplaying
 :pom-artifactid: github-hosted-maven-kp-project
+:waffle: {github-repo}
 :license-name: MIT
 :license-shield: {license-name}
 :license-url: http://opensource.org/licenses/MIT
@@ -16,6 +17,7 @@ Cyrille Chopelet <cyrille.chopelet@mines-nancy.org>
 image:{url-shields}travis/{github-user}/{github-repo}/master.svg[Build status, link="https://travis-ci.org/{github-user}/{github-repo}"]
 image:{url-shields}sonar/http/{url-sonar}/{pom-groupid}:{pom-artifactid}/coverage.svg[Test coverage, link="http://{url-sonar}/drilldown/measures/?id={pom-groupid}:{pom-artifactid}&metric=coverage"]
 image:{url-shields}sonar/http/{url-sonar}/{pom-groupid}:{pom-artifactid}/tech_debt.svg[Technical debt, link="http://{url-sonar}/dashboard/index?id={pom-groupid}:{pom-artifactid}"]
+image:https://badge.waffle.io/{github-user}/{waffle}.svg?label=ready&title=Ready[Waffle, link="https://waffle.io/{github-user}/{waffle}"]
 image:{url-shields}badge/license-{license-shield}-blue.svg[License: {license-name}, link="{license-url}"]
 
 // Now, the main documentation.
