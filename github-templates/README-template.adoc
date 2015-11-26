@@ -16,7 +16,7 @@ image:{url-shields}travis/{github-user}/{github-repo}/master.svg[Build status, l
 image:{url-shields}coveralls/{github-user}/{github-repo}/master.svg[Test coverage, link="https://coveralls.io/r/{github-user}/{github-repo}?branch=master"]
 image:{url-shields}coverity/scan/{coverity-scan}.svg[Coverity status, link="https://scan.coverity.com/projects/{coverity-name}"]
 // image:https://badge.waffle.io/{github-user}/{waffle}.svg?label=ready&title=Ready[Waffle, link="https://waffle.io/{github-user}/{waffle}"]
-image:{url-shields}github/issues-raw/{github-user}/{github-repo}.svg?label=ready&title=Ready[Waffle, link="https://waffle.io/{github-user}/{waffle}"]
+image:{url-shields}github/issues-raw/{github-user}/{github-repo}.svg[Waffle, link="https://waffle.io/{github-user}/{waffle}"]
 image:{url-shields}github/license/{github-user}/{github-repo}.svg[License: {license-name}, link="{license-url}"]
 
 // Now, the main documentation.
