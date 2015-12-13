@@ -1,23 +1,9 @@
 = Project name
 Cyrille Chopelet <cyrille.chopelet@mines-nancy.org>
 
-// Set your repository informations here.
-:github-user: cyChop
-:github-repo: github-hosted-maven-kp-project
-:coverity-name: cychop-{github-repo}
-:coverity-scan: 1337
-:waffle: {github-repo}
-:license-name: MIT
-:license-url: http://opensource.org/licenses/MIT
-
-// The badges. Should not require any change.
-:url-shields: http://img.shields.io/
-image:{url-shields}travis/{github-user}/{github-repo}/master.svg[Build status, link="https://travis-ci.org/{github-user}/{github-repo}"]
-image:{url-shields}coveralls/{github-user}/{github-repo}/master.svg[Test coverage, link="https://coveralls.io/r/{github-user}/{github-repo}?branch=master"]
-image:{url-shields}coverity/scan/{coverity-scan}.svg[Coverity status, link="https://scan.coverity.com/projects/{coverity-name}"]
-// image:https://badge.waffle.io/{github-user}/{waffle}.svg?label=ready&title=Ready[Waffle, link="https://waffle.io/{github-user}/{waffle}"]
-image:{url-shields}github/issues-raw/{github-user}/{github-repo}.svg[Waffle, link="https://waffle.io/{github-user}/{waffle}"]
-image:{url-shields}github/license/{github-user}/{github-repo}.svg[License: {license-name}, link="{license-url}"]
+// Template
+include::kp-vars.adoc[]
+include::kp-badges.adoc[]
 
 // Now, the main documentation.
 
