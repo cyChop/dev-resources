@@ -1,7 +1,8 @@
 // Github, Travis, Waffle/issues & license
 :github-user: cyChop
-:github-repo: github-hosted-maven-kp-project
-:travis-built: true
+:github-repo: dev-resources
+:github-description: Resources for KP's Github hosted projects.
+:travis-built: false
 :waffle: {github-repo}
 :license-name: MIT
 :license-url: http://opensource.org/licenses/MIT
