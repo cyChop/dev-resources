@@ -1,9 +1,38 @@
 = Project name
 Cyrille Chopelet <cyrille.chopelet@mines-nancy.org>
 
-// Template
-include::kp-vars.adoc[]
-include::kp-badges.adoc[]
+// Github, Travis, Waffle/issues & license
+:github-user: cyChop
+:github-repo: dev-resources
+:github-description: Resources for KP's Github hosted projects.
+:travis-built: false
+:waffle: {github-repo}
+:license-name: MIT
+:license-url: http://opensource.org/licenses/MIT
+// Maven projects
+:pom-groupid: org.keyboardplaying
+:pom-artifactid: {github-repo}
+// Sonar projects
+:sonar-groupid: {pom-groupid}
+:sonar-artifactid: {pom-artifactid}
+// The badges. Should not require any change.
+:url-shields: http://img.shields.io/
+:url-sonar: sonar.keyboardplaying.org
+// Travis
+ifeval::["{travis-built}" == "true"]
+image:{url-shields}travis/{github-user}/{github-repo}/master.svg[Build status, link="https://travis-ci.org/{github-user}/{github-repo}"]
+endif::[]
+// Sonar badges
+ifdef::sonar-groupid,sonar-artifactid[]
+image:{url-shields}sonar/http/{url-sonar}/{sonar-groupid}:{sonar-artifactid}/coverage.svg[Test coverage, link="http://{url-sonar}/drilldown/measures/?id={sonar-groupid}:{sonar-artifactid}&metric=coverage"]
+image:{url-shields}sonar/http/{url-sonar}/{sonar-groupid}:{sonar-artifactid}/tech_debt.svg[Technical debt, link="http://{url-sonar}/dashboard/index?id={sonar-groupid}:{sonar-artifactid}"]
+endif::sonar-groupid,sonar-artifactid[]
+// Issues
+ifdef::waffle[]
+image:{url-shields}github/issues-raw/{github-user}/{github-repo}.svg[Waffle, link="https://waffle.io/{github-user}/{waffle}"]
+endif::waffle[]
+// License
+image:{url-shields}github/license/{github-user}/{github-repo}.svg[License: {license-name}, link="{license-url}"]
 
 // Now, the main documentation.
 
