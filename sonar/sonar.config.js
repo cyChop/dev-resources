@@ -11,7 +11,6 @@ module.exports = {
         sources: 'src',
         language: 'js',
         sourceEncoding: 'UTF-8',
-        // FIXME add test coverage
         exec: {
             maxBuffer: 1024 * 1024
         }
