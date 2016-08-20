@@ -10,6 +10,11 @@ module.exports = {
         projectVersion: pkg.version,
         sources: 'src',
         language: 'js',
+        javascript: {
+            lcov: {
+                reportPath: 'bin/coverage/report-lcov/lcov.info'
+            }
+        },
         sourceEncoding: 'UTF-8',
         exec: {
             maxBuffer: 1024 * 1024
