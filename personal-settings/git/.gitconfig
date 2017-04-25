@@ -12,6 +12,7 @@
 	rebase = true
 [alias]
 	please = push --force-with-lease
+	amend = commit --amend --date=now
 	commend = commit --amend --no-edit --date=now
 	it = !git init && git commit -m “root” --allow-empty
 	stat = status --short --branch
