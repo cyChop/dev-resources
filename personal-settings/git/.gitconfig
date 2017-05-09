@@ -12,6 +12,7 @@
 	rebase = true
 [alias]
 	it = !git init && git commit -m “root” --allow-empty
+	dif = diff --minimal --irreversible-delete --word-diff=color
 	adda = add --all
 	stat = status --short --branch
 	amend = commit --amend --date=now
