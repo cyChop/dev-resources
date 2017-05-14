@@ -1,9 +1,11 @@
 language: java
+dist: trusty
 
-# SONARQUBE_TOKEN must have been defined as environment variable in Travis build's settings
 addons:
   sonarqube:
     token: $SONARQUBE_TOKEN
+    branches:
+      - master
 
 jdk:
   - oraclejdk8
